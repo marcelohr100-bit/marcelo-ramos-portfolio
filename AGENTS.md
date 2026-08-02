@@ -1,30 +1,26 @@
 # Instruções para o Codex
 
 ## Objetivo
+
 Manter um portfólio estático, responsivo, acessível e gratuito para Marcelo Henrique Ramos.
 
 ## Regras obrigatórias
 
-- Não adicionar serviços pagos.
-- Não adicionar banco de dados, autenticação, checkout ou backend sem aprovação explícita.
-- Não inventar clientes, métricas, depoimentos ou resultados.
-- Identificar conteúdos demonstrativos como demonstração.
-- Manter o SmartMenu AI como projeto em desenvolvimento até confirmação de lançamento.
-- Links de compra devem direcionar para plataformas externas.
-- Manter todo conteúdo editável em `data.js`.
-- Preservar funcionamento em GitHub Pages sem build.
-- Validar `node --check app.js` e `node --check data.js` após mudanças.
+- Não adicionar serviços pagos, banco de dados, autenticação, checkout ou backend.
+- Não inventar produtos, clientes, resultados, métricas, depoimentos ou preços.
+- O catálogo comercial deve conter apenas os produtos confirmados em `data.js`.
+- Cada produto deve manter exatamente duas ofertas oficiais em `purchaseLinks`: Gumroad e Payhip.
+- Preços e condições comerciais não devem ser armazenados no site; podem mudar nas plataformas de venda.
+- Cases profissionais devem permanecer anonimizados e sem informações confidenciais.
+- Não criar filtros ou controles quando o volume de conteúdo não justificar sua existência.
+- Todo campo em `data.js` deve ser efetivamente usado pela interface.
+- Preservar funcionamento no GitHub Pages sem processo de build.
 
-## Prioridade
-Simplicidade, desempenho, acessibilidade e custo zero.
-## Catálogo oficial
+## Validação obrigatória após alterações
 
-O catálogo comercial deve refletir apenas produtos reais informados pelo proprietário. Nesta versão, os produtos oficiais são:
-
-- 90 Second Shield
-- SBOM Drift Desk
-- CRA 24H Incident Desk
-- A50 Agency Desk
-
-Não criar produtos fictícios nem recolocar itens demonstrativos no catálogo.
-
+- Executar `node --check app.js`.
+- Executar `node --check data.js`.
+- Confirmar ausência de slugs duplicados.
+- Confirmar que todas as imagens existem e que cada produto possui links válidos para Gumroad e Payhip.
+- Testar as rotas em desktop e celular.
+- Verificar ausência de erros no console e de rolagem horizontal.
