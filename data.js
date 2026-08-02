@@ -69,29 +69,104 @@ window.PORTFOLIO_DATA = {
   ],
   products: [
     {
-      slug:'chronos-workflow-platform', name:'Chronos Workflow Platform', summary:'Plataforma SaaS para digitalizar e automatizar processos empresariais.', category:'Automação de Processos', audience:'Empresas e equipes operacionais', type:'SaaS', status:'Disponível', price:'US$ 2+', accent:'green', featured:true, label:'Produto disponível', variant:'workflow', externalUrl:'https://payhip.com/b/fETNY', projectSlug:'chronos-workflow-platform',
-      description:'Uma solução voltada à digitalização de workflows, com configuração no-code, formulários personalizáveis, trilha de auditoria e operação em nuvem.',
-      problemSolved:'Reduz a dependência de processos manuais, planilhas dispersas e documentos sem rastreabilidade.',
-      benefits:['Processos mais organizados','Configuração sem código','Maior rastreabilidade','Apoio ao trabalho remoto'],
-      features:['Workflow pronto para uso','Assistente de processos','Formulários personalizáveis','Backups','Auditoria'],
-      included:['Acesso à página externa do produto','Informações de aquisição e uso disponibilizadas pela plataforma de venda'],
-      delivery:'A contratação e a entrega acontecem integralmente pela plataforma externa Payhip.',
-      faq:[{question:'O pagamento acontece neste site?',answer:'Não. O botão direciona para a página externa e segura de compra.'},{question:'O produto exige servidor próprio?',answer:'A proposta é operar em nuvem, reduzindo a necessidade de infraestrutura própria.'}]
+      slug:'90-second-shield',
+      name:'90 Second Shield',
+      summary:'Guia digital prático e discreto para se preparar para situações de ansiedade social em apenas 90 segundos.',
+      category:'Bem-estar e Produtividade',
+      audience:'Pessoas que enfrentam ansiedade social',
+      type:'Guia digital',
+      status:'Disponível no Gumroad',
+      accent:'blue',
+      featured:true,
+      label:'Guia digital B2C',
+      image:'assets/products/90-second-shield.svg',
+      imageAlt:'Capa ilustrativa do produto 90 Second Shield',
+      externalUrl:'https://marceloramos3.gumroad.com/l/90-second-shield',
+      description:'Um guia digital direto ao ponto, criado para ajudar o leitor a organizar pensamentos, respiração e próximos passos antes de interações sociais desafiadoras. O conteúdo foi pensado para uso rápido, individual e discreto.',
+      problemSolved:'Ajuda a diminuir a sensação de improviso diante de situações sociais ao oferecer uma rotina curta, estruturada e fácil de consultar.',
+      benefits:['Rotina prática de 90 segundos','Aplicação discreta em diferentes contextos','Conteúdo objetivo e fácil de consultar','Entrega digital imediata pela plataforma de venda'],
+      features:['Protocolo guiado de preparação','Passos curtos e acionáveis','Estratégias para organizar o foco','Orientações de uso responsável'],
+      included:['Guia digital do 90 Second Shield','Acesso aos arquivos e instruções disponibilizados na oferta oficial'],
+      delivery:'Pagamento, download e suporte comercial são realizados pela página oficial do produto no Gumroad.',
+      faq:[
+        {question:'O produto substitui terapia ou atendimento médico?',answer:'Não. É um material educacional e de apoio pessoal, sem promessa de cura e sem substituir acompanhamento profissional.'},
+        {question:'Onde recebo o material?',answer:'Após a compra, a entrega digital é processada diretamente pelo Gumroad.'}
+      ]
     },
     {
-      slug:'smartmenu-ai', name:'SmartMenu AI', summary:'SaaS de cardápio digital e operação de atendimento para restaurantes.', category:'Food Service', audience:'Restaurantes, bares e cafeterias', type:'SaaS', status:'Em desenvolvimento', accent:'blue', featured:true, label:'Projeto em desenvolvimento', variant:'menu', projectSlug:'smartmenu-ai',
-      description:'Produto em especificação e prototipação. Ainda não está disponível para compra.',
-      problemSolved:'Centraliza cardápio, pedidos, chamadas de atendimento, cozinha e administração em uma experiência web.',
-      benefits:['Menos atrito para o cliente','Operação mais organizada','Atualização centralizada do cardápio'],
-      features:['QR Code por mesa','Carrinho','Pedidos','Chamar garçom','Solicitar conta','Painel de cozinha'],
-      included:['Produto ainda não comercializado'],
-      delivery:'O formato de contratação será definido após a conclusão e validação do MVP.',
-      faq:[{question:'Já posso comprar?',answer:'Não. O produto está em desenvolvimento.'},{question:'Será um aplicativo?',answer:'A proposta atual é uma plataforma web responsiva, sem instalação obrigatória.'}]
+      slug:'sbom-drift-desk',
+      name:'SBOM Drift Desk',
+      summary:'Aplicação offline para comparar SBOMs CycloneDX e SPDX, identificar mudanças e exportar evidências.',
+      category:'Cibersegurança e Supply Chain',
+      audience:'Times de segurança, compliance e engenharia',
+      type:'Aplicação offline',
+      status:'Disponível no Gumroad',
+      accent:'green',
+      featured:true,
+      label:'Software de segurança',
+      image:'assets/products/sbom-drift-desk.svg',
+      imageAlt:'Capa ilustrativa do produto SBOM Drift Desk',
+      externalUrl:'https://marceloramos3.gumroad.com/l/sbom-drift-desk',
+      description:'Ferramenta executada localmente para comparar versões de Software Bills of Materials e evidenciar alterações entre arquivos CycloneDX e SPDX, sem depender de servidor, conta ou assinatura.',
+      problemSolved:'Facilita a identificação de drift entre SBOMs, reduzindo a comparação manual de componentes, versões, hashes, licenças e fornecedores.',
+      benefits:['Processamento local e privado','Comparação estruturada de versões','Evidências exportáveis para análise','Sem servidor, login ou assinatura recorrente'],
+      features:['Suporte a CycloneDX e SPDX','Detecção de mudanças de versão, hash, licença e fornecedor','Medição de cobertura de campos','Exportação em CSV, HTML e JSON'],
+      included:['Pacote digital para download','Aplicação offline e materiais de utilização incluídos na oferta oficial'],
+      delivery:'O pacote é adquirido e entregue digitalmente pelo Gumroad para execução no ambiente local do comprador.',
+      faq:[
+        {question:'Os arquivos são enviados para um servidor?',answer:'A proposta do produto é operar offline, mantendo a análise no ambiente local.'},
+        {question:'Quais formatos são comparados?',answer:'O produto foi desenvolvido para trabalhar com SBOMs nos padrões CycloneDX e SPDX.'}
+      ]
     },
     {
-      slug:'project-command', name:'Project Command', summary:'Conceito demonstrativo de dashboard executivo para gestão de portfólio.', category:'Gestão de Projetos', audience:'PMOs e lideranças', type:'Aplicação web', status:'Conceito demonstrativo', accent:'violet', featured:false, label:'Conteúdo de demonstração', variant:'dashboard', projectSlug:'project-command',
-      description:'Item criado apenas para demonstrar como futuros produtos poderão aparecer no catálogo.',
-      problemSolved:'Exemplo de consolidação de status, riscos e marcos.', benefits:['Demonstração visual da estrutura do catálogo'], features:['Cards','Filtros','Página de detalhes'], included:['Nenhum produto comercializado'], delivery:'Não aplicável.', faq:[{question:'Este produto existe?',answer:'É apenas um conceito demonstrativo do protótipo.'}]
+      slug:'cra-24h-incident-desk',
+      name:'CRA 24H Incident Desk',
+      summary:'Sistema operacional para organizar prazos, evidências e pacotes de reporte de incidentes relacionados ao Cyber Resilience Act.',
+      category:'Compliance e Cibersegurança',
+      audience:'Times de segurança, produto e compliance',
+      type:'Incident Desk',
+      status:'Disponível no Gumroad',
+      accent:'violet',
+      featured:true,
+      label:'CRA reporting toolkit',
+      image:'assets/products/cra-24h-incident-desk.svg',
+      imageAlt:'Capa ilustrativa do produto CRA 24H Incident Desk',
+      externalUrl:'https://marceloramos3.gumroad.com/l/cra-24h-incident-desk',
+      description:'Ferramenta operacional para iniciar o relógio a partir da tomada de conhecimento do incidente, acompanhar os marcos de 24 e 72 horas e organizar o pacote final de reporte com responsáveis, contatos e evidências.',
+      problemSolved:'Substitui controles improvisados por uma estrutura única para acompanhar prazos críticos e preparar documentação de incidentes relacionados ao CRA.',
+      benefits:['Visibilidade imediata dos prazos','Organização centralizada das evidências','Clareza de responsáveis e contatos','Pacotes de reporte preparados de forma consistente'],
+      features:['Registro do momento de awareness','Cálculo dos marcos de 24h, 72h e relatório final','Três pacotes de reporte','Controle de evidências, responsáveis e contatos'],
+      included:['Pacote digital do CRA 24H Incident Desk','Modelos e materiais operacionais descritos na oferta oficial'],
+      delivery:'A compra e a entrega do pacote digital são realizadas pela página oficial do produto no Gumroad.',
+      faq:[
+        {question:'O produto substitui aconselhamento jurídico?',answer:'Não. É uma ferramenta operacional e não substitui análise jurídica ou regulatória especializada.'},
+        {question:'O sistema envia notificações oficiais automaticamente?',answer:'O produto organiza informações e pacotes de reporte; o envio oficial deve seguir o processo definido pela organização.'}
+      ]
+    },
+    {
+      slug:'a50-agency-desk',
+      name:'A50 Agency Desk',
+      summary:'Kit local de transparência para agências, freelancers e criadores que utilizam IA em trabalhos destinados ao mercado europeu.',
+      category:'AI Governance e Compliance',
+      audience:'Agências, freelancers e criadores que atendem a UE',
+      type:'Compliance Kit',
+      status:'Disponível no Gumroad',
+      accent:'mixed',
+      featured:true,
+      label:'EU AI transparency kit',
+      image:'assets/products/a50-agency-desk.svg',
+      imageAlt:'Capa ilustrativa do produto A50 Agency Desk',
+      externalUrl:'https://marceloramos3.gumroad.com/l/a50-agency-desk',
+      description:'Pacote prático para estruturar transparência no uso de conteúdo gerado ou manipulado por IA em serviços de marketing, criação e comunicação destinados a clientes e públicos europeus.',
+      problemSolved:'Ajuda profissionais e pequenas equipes a documentar o uso de IA, selecionar avisos adequados e registrar aprovações sem criar um programa de compliance do zero.',
+      benefits:['Processo local e reutilizável','Documentação organizada por trabalho e cliente','Avisos de transparência prontos para adaptação','Menos retrabalho na aprovação de conteúdo'],
+      features:['Classificador de obrigações','Registro de conteúdo com IA','Biblioteca de avisos','Fluxo de aprovação do cliente','Modelos de política, contrato e e-mail'],
+      included:['Pacote digital A50 Agency Desk','Manual e modelos operacionais descritos na oferta oficial'],
+      delivery:'O material é adquirido e entregue digitalmente pelo Gumroad para uso local pelo comprador.',
+      faq:[
+        {question:'O kit oferece aconselhamento jurídico?',answer:'Não. Ele organiza o processo de transparência e documentação, mas não substitui orientação jurídica.'},
+        {question:'Para quem o kit foi criado?',answer:'Para agências, freelancers e criadores que utilizam IA e atendem clientes ou públicos ligados à União Europeia.'}
+      ]
     }
   ]
 }

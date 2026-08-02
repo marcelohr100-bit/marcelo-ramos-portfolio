@@ -4,6 +4,10 @@
   const nav = document.querySelector('#nav')
   const menuButton = document.querySelector('#menu-button')
   document.querySelector('#year').textContent = new Date().getFullYear()
+  document.querySelector('#skip-link')?.addEventListener('click', () => {
+    main.setAttribute('tabindex', '-1')
+    main.focus()
+  })
 
   const escapeHtml = (value='') => String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#039;','"':'&quot;'}[char]))
   const list = items => `<ul class="bullet-list">${items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
@@ -11,6 +15,9 @@
   const externalButton = (url, label) => url ? `<a class="button button-primary" href="${url}" target="_blank" rel="noreferrer">${label} ↗</a>` : ''
 
   function mockup(item, compact=false) {
+    if (item.image) {
+      return `<figure class="product-cover ${compact?'compact':''}"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt || `Capa de ${item.name}`)}" loading="lazy"><figcaption>${escapeHtml(item.label || 'Produto digital')}</figcaption></figure>`
+    }
     const variant = item.variant || 'dashboard'
     let content = ''
     if (variant === 'dashboard') content = `<div class="mockup-dashboard"><div class="mockup-sidebar"></div><div class="mockup-main"><div class="mockup-kpis"><span></span><span></span><span></span></div><div class="mockup-chart"><b></b><b></b><b></b><b></b><b></b><b></b></div><div class="mockup-lines"><span></span><span></span><span></span></div></div></div>`
@@ -43,7 +50,7 @@
         <div class="hero-visual"><div class="hero-card hero-card-main">${mockup(data.projects[0])}</div><div class="hero-card hero-card-top">${mockup(data.projects[2])}</div><div class="hero-card hero-card-bottom">${mockup(data.projects[1])}</div></div>
       </div></section>
       <section class="section container"><div class="section-head"><div><span class="eyebrow">Portfólio</span><h2>Projetos em destaque</h2><p>Problema, estratégia, solução e aprendizados — sem maquiagem corporativa.</p></div><a class="text-link" href="#/projetos">Ver todos →</a></div><div class="cards-grid">${featuredProjects.map(projectCard).join('')}</div></section>
-      <section class="section section-soft"><div class="container"><div class="section-head"><div><span class="eyebrow">Produtos</span><h2>Soluções disponíveis e em evolução</h2><p>O portfólio apresenta o produto; a compra acontece na plataforma externa.</p></div><a class="text-link" href="#/produtos">Ver catálogo →</a></div><div class="cards-grid">${featuredProducts.map(productCard).join('')}</div></div></section>
+      <section class="section section-soft"><div class="container"><div class="section-head"><div><span class="eyebrow">Produtos</span><h2>Produtos digitais publicados</h2><p>Ferramentas e guias reais disponíveis para compra e entrega externa pelo Gumroad.</p></div><a class="text-link" href="#/produtos">Ver catálogo →</a></div><div class="cards-grid">${featuredProducts.map(productCard).join('')}</div></div></section>
       <section class="section container"><div class="section-head"><div><span class="eyebrow">Método</span><h2>Da dor ao produto</h2><p>Uma linha de trabalho pragmática para não construir feature gourmet que ninguém pediu.</p></div></div><ol class="process-grid">${data.process.map(step=>`<li><span>${step.number}</span><h3>${step.title}</h3><p>${step.text}</p></li>`).join('')}</ol></section>
       <section class="section section-soft"><div class="container about-preview"><img src="assets/profile.png" alt="Marcelo Henrique Ramos em ambiente profissional"><div><span class="eyebrow">Sobre</span><h2>Gestão, produto e tecnologia na mesma conversa.</h2><p>Sou Gerente de Projetos de Tecnologia, com formação em Ciência da Computação, MBA em Gestão de Projetos Ágeis e pós-graduação em Cloud Computing. Atuo traduzindo problemas de negócio em escopo, prioridades e soluções digitais viáveis.</p>${chips(data.specialties.slice(0,8))}<a class="button button-secondary" href="#/sobre">Conhecer trajetória</a></div></div></section>
       <section class="section container"><div class="section-head"><div><span class="eyebrow">Stack</span><h2>Tecnologias e ferramentas</h2><p>O conjunto muda conforme o problema. A decisão técnica vem depois da necessidade.</p></div></div><div class="tech-grid">${data.techGroups.map(g=>`<article><h3>${g.title}</h3>${chips(g.items)}</article>`).join('')}</div></section>

@@ -11,3 +11,14 @@
 @media(max-width:760px){.container{width:min(100% - 24px,1160px)}.menu-button{display:flex}.nav{position:absolute;top:72px;left:12px;right:12px;display:none;flex-direction:column;align-items:stretch;background:#fff;padding:10px;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.nav-open{display:flex}.nav a{padding:13px}.hero-grid{min-height:auto;gap:24px}.hero-copy{padding-block:70px 28px}.hero h1{font-size:clamp(41px,13vw,58px)}.hero-visual{min-height:390px}.hero-card-main{width:88%;top:86px}.hero-card-top{width:64%}.hero-card-bottom{width:62%;bottom:4px}.section{padding-block:68px}.section-head{align-items:flex-start;flex-direction:column}.cards-grid,.process-grid,.tech-grid,.two-columns,.contact-grid,.faq-grid,.about-preview,.about-page,.footer-grid{grid-template-columns:1fr}.about-preview,.about-page{gap:30px}.about-preview img,.about-page img{max-height:520px}.filter-panel{grid-template-columns:1fr}.search-box,.filter-footer{grid-column:auto}.filter-footer{gap:12px}.detail-hero .mockup{min-height:240px}.detail-content article,.two-columns>article{padding:23px}.footer-grid{gap:30px}}
 @media(max-width:480px){.brand small{display:none}.brand b{max-width:150px}.hero-actions .button{width:100%}.hero-visual{min-height:330px}.mockup{min-height:180px}.hero-card-main{width:92%}.hero-card-top,.hero-card-bottom{width:66%}.cards-grid{grid-template-columns:1fr}.page-hero{padding-block:70px 56px}.final-cta{padding:48px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+
+
+/* Product artwork */
+.product-cover{position:relative;margin:0;min-height:320px;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:#081326;box-shadow:var(--shadow)}
+.product-cover.compact{min-height:190px;border:0;border-radius:0;border-bottom:1px solid var(--line);box-shadow:none}
+.product-cover img{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:center}
+.product-cover figcaption{position:absolute;left:14px;bottom:14px;max-width:calc(100% - 28px);padding:7px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(4,13,28,.72);color:#fff;font-size:10px;font-weight:800;letter-spacing:.03em;backdrop-filter:blur(12px)}
+.card>.product-cover{aspect-ratio:3/2}
+.detail-hero .product-cover{aspect-ratio:3/2;min-height:320px}
+.skip-link{font:inherit;border:0;cursor:pointer}
+@media(max-width:760px){.detail-hero .product-cover{min-height:240px}}

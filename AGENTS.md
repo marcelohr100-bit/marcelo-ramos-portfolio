@@ -17,3 +17,14 @@ Manter um portfólio estático, responsivo, acessível e gratuito para Marcelo H
 
 ## Prioridade
 Simplicidade, desempenho, acessibilidade e custo zero.
+## Catálogo oficial
+
+O catálogo comercial deve refletir apenas produtos reais informados pelo proprietário. Nesta versão, os produtos oficiais são:
+
+- 90 Second Shield
+- SBOM Drift Desk
+- CRA 24H Incident Desk
+- A50 Agency Desk
+
+Não criar produtos fictícios nem recolocar itens demonstrativos no catálogo.
+

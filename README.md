@@ -36,3 +36,14 @@ Links externos aparecem apenas quando `purchaseUrl`, `projectUrl` ou `externalUr
 Endereço esperado:
 
 `https://marcelohr100-bit.github.io/marcelo-ramos-portfolio/`
+## Produtos publicados
+
+O catálogo atual apresenta quatro produtos reais comercializados externamente no Gumroad:
+
+- 90 Second Shield
+- SBOM Drift Desk
+- CRA 24H Incident Desk
+- A50 Agency Desk
+
+As capas usadas no portfólio ficam em `assets/products/` e podem ser substituídas sem alterar a lógica do site.
+
