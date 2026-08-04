@@ -11,6 +11,7 @@
   <meta property="og:url" content="https://marcelohr100-bit.github.io/marcelo-ramos-portfolio/" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="linkedin-badge.css" />
   <title>Marcelo Ramos — Product & Project Studio</title>
 </head>
 <body>
@@ -47,15 +48,29 @@
         <a href="#/projetos">Projetos</a>
         <a href="#/sobre">Sobre</a>
       </div>
-      <div>
-        <h3>Conectar</h3>
-        <a href="https://www.linkedin.com/in/marcelo-ramos-245246137" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a href="#/produtos">Catálogo de produtos →</a>
+      <div class="footer-linkedin">
+        <h3>Perfil profissional</h3>
+        <p class="footer-linkedin-intro">Conheça minha trajetória, experiências e conexões profissionais.</p>
+        <div class="linkedin-badge-shell" aria-label="Perfil público de Marcelo Henrique Ramos no LinkedIn">
+          <div class="badge-base LI-profile-badge"
+               data-locale="pt_BR"
+               data-size="medium"
+               data-theme="dark"
+               data-type="HORIZONTAL"
+               data-vanity="marcelo-ramos-245246137"
+               data-version="v1">
+            <a class="badge-base__link LI-simple-link"
+               href="https://www.linkedin.com/in/marcelo-ramos-245246137?trk=profile-badge"
+               target="_blank"
+               rel="noreferrer">Ver perfil de Marcelo Henrique Ramos no LinkedIn ↗</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container footer-bottom">© <span id="year"></span> Marcelo Henrique Ramos.</div>
   </footer>
   <script src="data.js"></script>
   <script src="app.js"></script>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 </html>
