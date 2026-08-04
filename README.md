@@ -5,8 +5,7 @@ Portfólio profissional e catálogo estático de produtos digitais, com compra e
 ## Estrutura
 
 - `index.html`: estrutura base e navegação
-- `styles.css`: design responsivo principal
-- `linkedin-badge.css`: responsividade e fallback do selo público do LinkedIn
+- `styles.css`: design responsivo
 - `data.js`: conteúdo exibido no site
 - `app.js`: renderização e roteamento
 - `assets/products/`: capas ilustrativas dos produtos
@@ -16,19 +15,17 @@ Portfólio profissional e catálogo estático de produtos digitais, com compra e
 
 Produtos publicados com duas opções oficiais de compra:
 
-- 90 Second Shield
+- AirClaim Vault — Flight Disruption Claim Desk
+- Battery Passport Intake Desk — Supplier Data & Evidence Workbook
 - SBOM Drift Desk
 - CRA 24H Incident Desk
 - A50 Agency Desk
+- 90 Second Shield
 
 Projetos apresentados:
 
 - SmartMenu AI
 - Integração ERP–CRM, em formato anonimizado
-
-## Selo público do LinkedIn
-
-O rodapé utiliza o selo oficial de perfil público do LinkedIn em formato horizontal, tamanho médio, tema escuro e localidade brasileira. O link textual para o perfil permanece disponível como fallback caso o script externo seja bloqueado pelo navegador, por uma extensão de privacidade ou por indisponibilidade de rede.
 
 ## Publicação
 
@@ -44,4 +41,8 @@ URL:
 - Sem filtros desnecessários para o volume atual
 - Sem conteúdos fictícios ou demonstrativos no catálogo
 - Links externos validados estruturalmente
-- Rotas, responsividade, acessibilidade e selo do LinkedIn testados
+- Rotas, responsividade, acessibilidade e console testados
+
+## Selo público do LinkedIn
+
+O rodapé utiliza o selo oficial de perfil público do LinkedIn em formato horizontal e tema escuro. O link textual permanece disponível como fallback caso o script externo do LinkedIn seja bloqueado pelo navegador, por uma extensão de privacidade ou por indisponibilidade de rede.
