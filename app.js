@@ -65,7 +65,8 @@
 
   function renderHome() {
     setMeta(data.site.name, data.site.subtitle)
-    const heroProducts = data.products.slice(0, 3)
+    const featuredProducts = data.products.filter((product) => product.featured)
+    const heroProducts = featuredProducts.slice(0, 3)
 
     main.innerHTML = `
       <section class="hero">
@@ -90,10 +91,10 @@
 
       <section class="section container" id="produtos-destaque">
         <div class="section-head">
-          <div><span class="eyebrow">Catálogo real</span><h2>Produtos em destaque</h2><p>Quatro produtos reais com opções oficiais de compra no Gumroad e na Payhip, sem itens demonstrativos.</p></div>
+          <div><span class="eyebrow">Produtos desenvolvidos</span><h2>Soluções digitais em destaque</h2><p>Ferramentas, workbooks e guias criados para transformar necessidades específicas em processos claros, utilizáveis e comercializáveis.</p></div>
           <a class="text-link" href="#/produtos">Ver catálogo →</a>
         </div>
-        <div class="cards-grid products-grid">${data.products.map(productCard).join('')}</div>
+        <div class="cards-grid products-grid">${featuredProducts.slice(0, 4).map(productCard).join('')}</div>
       </section>
 
       <section class="section section-soft">
@@ -124,8 +125,8 @@
   }
 
   function renderProducts() {
-    setMeta('Produtos — Marcelo Ramos Studio', 'Produtos digitais publicados por Marcelo Ramos com compra no Gumroad e na Payhip.')
-    main.innerHTML = `${pageHero('Produtos', 'Catálogo digital', 'Escolha a plataforma de compra: Gumroad ou Payhip.')}
+    setMeta('Produtos — Marcelo Ramos Studio', 'Portfólio de produtos digitais desenvolvidos por Marcelo Ramos, com acesso pelo Gumroad e pela Payhip.')
+    main.innerHTML = `${pageHero('Produtos desenvolvidos', 'Catálogo digital', 'Soluções próprias apresentadas de forma profissional, com acesso oficial pelo Gumroad ou pela Payhip.')}
       <section class="section container"><div class="cards-grid products-grid">${data.products.map(productCard).join('')}</div></section>`
   }
 
