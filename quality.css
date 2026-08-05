@@ -1,0 +1,392 @@
+/* Final responsive and quality layer. Loaded last on purpose. */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+body,
+main,
+.header,
+.footer,
+.section,
+.hero,
+.page-hero,
+.detail-hero {
+  max-width: 100%;
+}
+
+.container,
+.header-inner,
+.footer-grid,
+.cards-grid,
+.process-grid,
+.profile-grid,
+.contact-grid,
+.detail-hero-grid,
+.detail-columns,
+.about-preview,
+.about-page,
+.expertise-card-header,
+.expertise-areas,
+.proof-heading,
+.credentials-grid,
+.recommendations-grid,
+.proof-preview-card {
+  min-width: 0;
+}
+
+.container > *,
+.footer-grid > *,
+.cards-grid > *,
+.profile-grid > *,
+.contact-grid > *,
+.detail-hero-grid > *,
+.detail-columns > *,
+.about-preview > *,
+.about-page > *,
+.expertise-card-header > *,
+.expertise-areas > *,
+.proof-heading > *,
+.credentials-grid > *,
+.recommendations-grid > *,
+.proof-preview-card > * {
+  min-width: 0;
+}
+
+.card h3,
+.detail-hero h1,
+.credential-card strong,
+.recommendation-card,
+.footer a,
+.footer p {
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-grid {
+  width: 100%;
+  grid-template-columns: minmax(220px, 1.2fr) minmax(150px, .55fr) minmax(260px, 1fr) !important;
+  gap: clamp(24px, 4vw, 42px);
+}
+
+.footer-grid > div {
+  width: 100%;
+  max-width: 100%;
+}
+
+.linkedin-badge-shell,
+.linkedin-badge-shell .LI-profile-badge,
+.linkedin-badge-shell .badge-base,
+.linkedin-badge-shell iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+.linkedin-mobile-link {
+  display: none !important;
+  width: fit-content;
+  max-width: 100%;
+  padding: 11px 14px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 11px;
+  color: #fff !important;
+  background: rgba(255,255,255,.07);
+  font-weight: 760;
+}
+
+.professional-proof-section {
+  background: #fff;
+}
+
+.proof-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, .75fr);
+  align-items: end;
+  gap: 36px;
+}
+
+.proof-heading h2,
+.recommendations-heading h2,
+.proof-preview-card h2 {
+  margin: 10px 0 13px;
+  color: var(--ink);
+  font-size: clamp(29px, 4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+.proof-heading p,
+.proof-preview-card p {
+  max-width: 710px;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.proof-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.proof-stats > div {
+  padding: 20px;
+  border: 1px solid rgba(0,120,212,.15);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #f7fbff, #fff);
+}
+
+.proof-stats strong,
+.proof-stats span {
+  display: block;
+}
+
+.proof-stats strong {
+  color: #0067b8;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.proof-stats span {
+  margin-top: 7px;
+  color: #637087;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.credentials-wrapper {
+  display: grid;
+  gap: 32px;
+  margin-top: 42px;
+}
+
+.credential-group h3 {
+  margin: 0 0 15px;
+  color: #17243a;
+  font-size: 17px;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.credential-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid #e0e8f1;
+  border-radius: 15px;
+  background: #fbfdff;
+}
+
+.credential-mark {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 30px;
+  border-radius: 9px;
+  color: #fff;
+  background: linear-gradient(135deg, #0078d4, #5c2d91);
+  font-weight: 850;
+}
+
+.credential-card strong,
+.credential-card span {
+  display: block;
+}
+
+.credential-card strong {
+  color: #17243a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.credential-card span {
+  margin-top: 5px;
+  color: #6b778b;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.recommendations-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 64px;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.recommendation-card {
+  position: relative;
+  padding: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(0,120,212,.15);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8fbff, #fff);
+  box-shadow: 0 22px 55px -46px rgba(0,78,140,.7);
+}
+
+.recommendation-symbol {
+  position: absolute;
+  top: 4px;
+  right: 18px;
+  color: rgba(0,120,212,.12);
+  font-family: Georgia, serif;
+  font-size: 78px;
+  line-height: 1;
+}
+
+.recommendation-card p {
+  position: relative;
+  margin: 0 0 22px;
+  color: #4f5e75;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.recommendation-card strong,
+.recommendation-card span {
+  display: block;
+}
+
+.recommendation-card strong {
+  color: #17243a;
+  font-size: 14px;
+}
+
+.recommendation-card span {
+  margin-top: 4px;
+  color: #7a8697;
+  font-size: 11px;
+}
+
+.recommendations-note {
+  margin: 16px 0 0;
+  color: #7a8697;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.professional-proof-preview {
+  padding-top: 0;
+  background: var(--soft);
+}
+
+.proof-preview-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
+  align-items: center;
+  gap: 34px;
+  padding: 34px;
+  border: 1px solid rgba(0,120,212,.16);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.proof-preview-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .footer-linkedin {
+    grid-column: 1 / -1;
+  }
+
+  .linkedin-badge-shell {
+    display: none;
+  }
+
+  .linkedin-mobile-link {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .proof-heading,
+  .proof-preview-card {
+    grid-template-columns: 1fr;
+  }
+
+  .proof-stats {
+    max-width: 460px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: calc(100% - 26px);
+    max-width: 1160px;
+  }
+
+  .footer-grid,
+  .credentials-grid,
+  .recommendations-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-linkedin {
+    grid-column: auto;
+  }
+
+  .recommendations-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .professional-proof-section {
+    padding-block: 68px;
+  }
+
+  .proof-preview-card {
+    padding: 27px 22px;
+  }
+
+  .proof-preview-actions,
+  .proof-preview-actions .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .proof-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-card,
+  .recommendation-card {
+    padding: 16px;
+  }
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
