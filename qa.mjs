@@ -98,7 +98,7 @@ check('Grid de certificações responsivo', quality.includes('.credentials-grid'
 check('Grid de recomendações responsivo', quality.includes('.recommendations-grid'))
 
 const combinedCss = `${styles}\n${identity}\n${linkedin}\n${quality}`
-check('Sem largura fixa do corpo', !/body\s*\{[^}]*width:\s*\d+px/s.test(combinedCss))
+check('Sem largura fixa do corpo', !/body\s*\{[^}]*?(?:^|[;{]\s*)width:\s*\d+px/ms.test(combinedCss))
 check('Sem bloqueio de zoom por CSS', !combinedCss.includes('touch-action: none'))
 check('Sem dados pessoais sensíveis no HTML', !/Maria de Jesus|99236-4334|pmo\.marcelo\.ramos@gmail\.com/i.test(`${index}\n${app}\n${profileDataSource}`))
 
