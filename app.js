@@ -63,6 +63,32 @@
     return `<section class="page-hero"><div class="container"><span class="eyebrow dark">${escapeHtml(label)}</span><h1>${escapeHtml(title)}</h1><p>${escapeHtml(description)}</p></div></section>`
   }
 
+  function microsoftExpertiseBlock() {
+    return `<section class="section microsoft-expertise-section">
+      <div class="container expertise-card">
+        <div class="expertise-card-header">
+          <div>
+            <span class="eyebrow">Ecossistema Microsoft</span>
+            <h2>Expertise aplicada em Microsoft Dynamics 365</h2>
+            <p>Experiência em projetos corporativos de ERP e CRM, conectando necessidades de negócio, regras operacionais, integrações e acompanhamento de entrega dentro do ecossistema Microsoft.</p>
+          </div>
+          <div class="ecosystem-signature" aria-label="Áreas de atuação no ecossistema Microsoft">
+            <div class="ecosystem-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <strong>Dynamics 365 · Azure · Power Platform</strong>
+            <span>Gestão de projetos, integrações, automação, homologação e evolução de soluções empresariais.</span>
+          </div>
+        </div>
+        <div class="expertise-areas">
+          <article><strong>Dynamics 365</strong><span>Projetos envolvendo processos de ERP e CRM.</span></article>
+          <article><strong>Integrações</strong><span>APIs, Azure Functions e sincronização entre sistemas.</span></article>
+          <article><strong>Power Platform</strong><span>Automação de fluxos e apoio a processos de negócio.</span></article>
+          <article><strong>Governança de entrega</strong><span>Escopo, backlog, homologação, riscos e stakeholders.</span></article>
+        </div>
+        <p class="trademark-note">Microsoft, Dynamics 365, Azure e Power Platform são marcas da Microsoft Corporation. Este portfólio é independente e não implica afiliação, patrocínio ou endosso da Microsoft.</p>
+      </div>
+    </section>`
+  }
+
   function renderHome() {
     setMeta(data.site.name, data.site.subtitle)
     const featuredProducts = data.products.filter((product) => product.featured)
@@ -115,7 +141,19 @@
       <section class="section section-soft">
         <div class="container about-preview">
           <img src="assets/profile.png" alt="Marcelo Henrique Ramos em ambiente profissional" loading="lazy">
-          <div><span class="eyebrow">Sobre</span><h2>Gestão, produto e tecnologia na mesma conversa.</h2><p>${escapeHtml(data.profile.intro)}</p>${chips(data.profile.specialties.slice(0, 6))}<a class="button button-secondary" href="#/sobre">Conhecer trajetória</a></div>
+          <div>
+            <span class="eyebrow">Sobre</span>
+            <h2>Gestão, produto e tecnologia na mesma conversa.</h2>
+            <p>${escapeHtml(data.profile.intro)}</p>
+            ${chips(data.profile.specialties.slice(0, 6))}
+            <div class="expertise-inline">
+              <small>Ecossistema Microsoft</small>
+              <strong>Experiência aplicada em Dynamics 365</strong>
+              <span>ERP, CRM, Azure, Power Platform e integrações corporativas.</span>
+              <a href="#/sobre">Conhecer a experiência →</a>
+            </div>
+            <a class="button button-secondary" href="#/sobre">Conhecer trajetória</a>
+          </div>
         </div>
       </section>
 
@@ -199,6 +237,7 @@
         <img src="assets/profile.png" alt="Marcelo Henrique Ramos em ambiente profissional">
         <div><span class="eyebrow">Perfil profissional</span><h2>Projetos bem executados começam com problemas bem entendidos.</h2><p>${escapeHtml(data.profile.intro)}</p><a class="button button-primary" href="${escapeHtml(data.site.linkedin)}" target="_blank" rel="noreferrer">Abrir LinkedIn ↗</a></div>
       </section>
+      ${microsoftExpertiseBlock()}
       <section class="section section-soft"><div class="container profile-grid"><article><h2>Formação</h2>${list(data.profile.education)}</article><article><h2>Especialidades</h2>${chips(data.profile.specialties)}</article><article><h2>Ferramentas</h2>${chips(data.profile.tools)}</article></div></section>`
   }
 
