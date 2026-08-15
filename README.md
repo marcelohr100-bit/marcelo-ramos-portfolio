@@ -1,56 +1,48 @@
-# Marcelo Ramos — Product & Project Studio
+# Marcelo Ramos — Executive Technology Portfolio
 
-Portfólio profissional e catálogo estático de produtos digitais, com compra externa pelo Gumroad ou Payhip.
+Portfólio profissional de **Marcelo Henrique Ramos**, posicionado prioritariamente em **Project Management, PMO, Portfolio & Project Governance, Agile/Hybrid Delivery e Digital Transformation**.
 
-## Posicionamento
+Microsoft Dynamics 365 permanece como diferenciação técnica relevante dentro de uma identidade profissional mais ampla de gestão e delivery. Produtos próprios ficam organizados em **Innovation Lab** como demonstração complementar de product thinking e iniciativa.
 
-A página funciona prioritariamente como apresentação profissional de Marcelo Henrique Ramos: trajetória, capacidade de gestão, experiência em tecnologia, projetos selecionados e produtos digitais desenvolvidos.
+## Estrutura pública
 
-A identidade visual utiliza princípios inspirados no Fluent Design — tipografia Segoe UI, superfícies limpas, profundidade discreta, azul como cor principal e detalhes multicoloridos — sem reproduzir logotipos ou ativos proprietários da Microsoft.
+- `/` — apresentação executiva
+- `/projetos/` — cases profissionais
+- `/expertise/` — core expertise, método e ecossistemas de trabalho
+- `/sobre/` — trajetória, formação, certificações e recomendações
+- `/innovation-lab/` — produtos, experimentos e soluções digitais
+- `/contato/` — conexões profissionais
 
-## Estrutura
+Cases e produtos possuem URLs estáticas próprias, canonical e metadata individual.
 
-- `index.html`: estrutura base e navegação
-- `styles.css`: design responsivo principal
-- `identity.css`: refinamento visual e seção de expertise Microsoft
-- `linkedin-badge.css`: tratamento responsivo do selo público do LinkedIn
-- `data.js`: conteúdo exibido no site
-- `app.js`: renderização e roteamento
-- `assets/products/`: capas ilustrativas dos produtos
-- `assets/profile.png`: fotografia profissional, inclusive no cabeçalho
+## Arquitetura
 
-## Expertise apresentada
+- HTML estático compatível com GitHub Pages
+- CSS leve, mantendo a identidade Fluent-inspired
+- JavaScript mínimo para navegação mobile e acessibilidade
+- Sem banco de dados, backend, login ou checkout
+- Conteúdo de referência em `data.js`
+- Rotas estratégicas sem hash routing
+- JSON-LD `Person/ProfilePage`
+- Open Graph / Twitter Cards
+- `sitemap.xml` e `robots.txt`
 
-A página “Sobre” inclui uma seção dedicada à experiência aplicada em:
+## Internacionalização
 
-- Microsoft Dynamics 365
-- ERP e CRM
-- Azure Functions e integrações
-- Power Platform
-- Gestão, homologação e governança de entrega
-
-A apresentação é textual e independente, sem sugerir afiliação, patrocínio ou endosso da Microsoft.
-
-## Produtos publicados
-
-- AirClaim Vault — Flight Disruption Claim Desk
-- Battery Passport Intake Desk — Supplier Data & Evidence Workbook
-- SBOM Drift Desk
-- CRA 24H Incident Desk
-- A50 Agency Desk
-- 90 Second Shield
-
-## Projetos apresentados
-
-- SmartMenu AI
-- Integração ERP–CRM, em formato anonimizado
+A arquitetura usa rotas estáticas e metadata por página, permitindo adicionar uma versão humana revisada em `/en/` no futuro. Neste ciclo, somente PT-BR é publicado para evitar tradução de baixa qualidade.
 
 ## Publicação
 
-GitHub Pages configurado a partir da branch `main`, pasta `/ (root)`.
+GitHub Pages: `https://marcelohr100-bit.github.io/marcelo-ramos-portfolio/`
 
-`https://marcelohr100-bit.github.io/marcelo-ramos-portfolio/`
+Branch: `main` · pasta: `/ (root)`
 
-## Selo público do LinkedIn
+## QA
 
-O rodapé utiliza o selo oficial de perfil público do LinkedIn em formato horizontal e tema escuro. O link textual permanece disponível como fallback caso o script externo seja bloqueado.
+Execute:
+
+```bash
+node qa.mjs
+```
+
+O QA valida posicionamento, rotas, metadata, canonical, Open Graph, JSON-LD, sitemap, links de produtos, certificações, recomendações e ausência de hash routing estratégico.
