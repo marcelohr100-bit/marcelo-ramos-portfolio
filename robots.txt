@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://marcelohr100-bit.github.io/marcelo-ramos-portfolio/sitemap.xml
