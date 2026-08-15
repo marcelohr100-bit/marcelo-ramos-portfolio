@@ -9,7 +9,7 @@ GitHub Actions — workflow `Portfolio Quality`:
 - `node qa.mjs`
 - **94 verificações aprovadas**
 - **0 falhas**
-- Run #6 concluído com `success`
+- merge candidate validado com conclusão `success`
 
 O QA cobre:
 
