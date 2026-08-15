@@ -1,49 +1,88 @@
-# Relatório de qualidade
+# Relatório de qualidade — Executive Technology Portfolio
 
-**Resultado:** aprovado; 0 falhas nos testes executados nesta versão.
+**Status:** aprovado para produção.
 
-## Resultado automatizado
+## QA automatizado
 
-- 117 verificações estruturais aprovadas localmente
-- 54 combinações visuais validadas: 9 larguras de tela × 6 rotas
-- Nenhuma rolagem horizontal indevida nas larguras entre 320 px e 1.440 px
-- Nenhuma sobreposição entre as colunas do rodapé
-- Rotas de início, produtos, projetos, sobre, contato e detalhe de produto verificadas
-- Workflow gratuito do GitHub Actions configurado para executar `node qa.mjs` a cada atualização
+GitHub Actions — workflow `Portfolio Quality`:
 
-## Correção de responsividade
+- `node qa.mjs`
+- **94 verificações aprovadas**
+- **0 falhas**
+- Run #6 concluído com `success`
 
-A origem da falha era uma regra tardia do selo do LinkedIn que restaurava uma grade de três colunas com largura mínima elevada. Em determinados níveis de zoom, o navegador mudava de breakpoint e comprimia a primeira coluna do rodapé.
+O QA cobre:
 
-A correção inclui:
+- remoção do branding `Product & Project Studio` das áreas principais
+- hero executivo e nova hierarquia da Home
+- Core Expertise
+- rotas estratégicas sem hash routing
+- títulos e descriptions próprios
+- canonical
+- Open Graph
+- Twitter Cards
+- JSON-LD
+- sitemap e robots
+- seis produtos preservados
+- 90 Second Shield fora dos destaques da Home
+- dois cases reais preservados
+- estrutura de dados pronta para seis categorias futuras de cases
+- certificações e emissor
+- ausência de PMP não comprovado
+- diferenciação do certificado `Certified Ethical Hacking — Udemy` em relação à CEH da EC-Council
+- recomendações e sínteses editoriais
+- LinkedIn
+- Gumroad e Payhip
+- foto profissional preservada
+- imagem Open Graph
+- viewport com zoom habilitado
+- skip link e main focável
+- ausência de dados pessoais sensíveis conhecidos
 
-- grid do rodapé fluido e com colapso antecipado
-- duas colunas em tablets e uma coluna em celulares
-- selo completo do LinkedIn somente em telas amplas
-- link compacto para o LinkedIn quando o selo não cabe com segurança
-- `min-width: 0` nos filhos de grids e flex containers
-- proteção global contra overflow horizontal
-- quebra segura de textos e links longos
-- viewport compatível com safe areas e zoom do usuário
+## QA visual
 
-## Conteúdo profissional
+Foram validadas **56 combinações de viewport × página**:
 
-- 10 certificações verificadas no currículo e no perfil público do LinkedIn
-- certificações agrupadas entre Gestão e liderança e Tecnologia e qualidade
-- indicação de 5 recomendações recebidas no LinkedIn
-- 2 recomendações públicas apresentadas em forma de síntese editorial
-- link para leitura das recomendações completas no LinkedIn
-- nenhum endereço, telefone ou e-mail pessoal exposto no código público
+- 7 larguras: 320, 360, 390, 430, 768, 1024 e 1440 px
+- 8 rotas representativas
+- ausência de overflow horizontal
+- menu mobile
+- hero
+- Core Expertise
+- cases
+- recomendações
+- Enterprise Technology Expertise
+- Innovation Lab
+- footer
 
-## Validações preservadas
+Screenshots finais foram produzidos para:
 
-- sintaxe de `app.js`, `data.js`, `profile-data.js` e `profile-sections.js`
-- seis produtos, slugs únicos e páginas individuais
-- links Gumroad e Payhip
-- capas e textos alternativos
-- projetos e perfil profissional
-- foto no cabeçalho
-- identidade visual Fluent-inspired
-- expertise em Microsoft Dynamics 365
-- selo público do LinkedIn em telas compatíveis
-- compatibilidade com GitHub Pages sem processo de build
+- Home desktop
+- Home mobile
+- Projetos
+- Sobre
+- Innovation Lab
+
+## SEO / arquitetura
+
+- páginas estratégicas convertidas para HTML estático indexável
+- URLs reais para `/projetos/`, `/expertise/`, `/sobre/`, `/innovation-lab/` e `/contato/`
+- páginas individuais para cases e produtos
+- `sitemap.xml`
+- `robots.txt`
+- JSON-LD `Person/ProfilePage`
+- `assets/og-cover.png` em 1200 × 630
+- PT-BR publicado; arquitetura preparada para futura versão humana/revisada em `/en/`
+
+## Arquivos legados removidos
+
+Foram removidos arquivos de runtime da arquitetura anterior que deixaram de ser utilizados:
+
+- `identity.css`
+- `quality.css`
+- `profile-data.js`
+- `profile-sections.js`
+- `QA_LAST_RUN.md`
+- `qa-report.json`
+
+A identidade Fluent-inspired continua preservada por `styles.css` + `executive.css`.
