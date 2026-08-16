@@ -7,5 +7,4 @@
   if(year) year.textContent=new Date().getFullYear();
   if(button&&nav){button.addEventListener('click',()=>{const open=nav.classList.toggle('nav-open');button.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('nav-open');button.setAttribute('aria-expanded','false');}));}
   if(skip){skip.addEventListener('click',()=>{const main=document.querySelector('#main'); if(main){main.focus();main.scrollIntoView({block:'start'});}})}
-  document.querySelectorAll('h2').forEach(h=>{if(h.textContent.trim()==='Prova profissional vem antes da vitrine de produtos.')h.textContent='Projetos que conectam governança, negócio e tecnologia.';});
 })();
