@@ -1,4 +1,4 @@
-# Marcelo Ramos — Executive Technology Portfolio
+# Marcelo Ramos — Project Management · PMO · Governance · Digital Transformation
 
 Portfólio profissional de **Marcelo Henrique Ramos**, posicionado prioritariamente em **Project Management, PMO, Portfolio & Project Governance, Agile/Hybrid Delivery e Digital Transformation**.
 
@@ -29,7 +29,7 @@ Cases e produtos possuem URLs estáticas próprias, canonical e metadata individ
 
 ## Internacionalização
 
-A arquitetura usa rotas estáticas e metadata por página, permitindo adicionar uma versão humana revisada em `/en/` no futuro. Neste ciclo, somente PT-BR é publicado para evitar tradução de baixa qualidade.
+A estrutura de rotas permite uma futura versão em inglês com revisão editorial dedicada. Atualmente, o conteúdo público está em PT-BR.
 
 ## Publicação
 
@@ -37,7 +37,7 @@ GitHub Pages: `https://marcelohr100-bit.github.io/marcelo-ramos-portfolio/`
 
 Branch: `main` · pasta: `/ (root)`
 
-## QA
+## Qualidade
 
 Execute:
 
@@ -45,4 +45,4 @@ Execute:
 node qa.mjs
 ```
 
-O QA valida posicionamento, rotas, metadata, canonical, Open Graph, JSON-LD, sitemap, links de produtos, certificações, recomendações e ausência de hash routing estratégico.
+A suíte verifica posicionamento, rotas, metadata, canonical, Open Graph, JSON-LD, sitemap, links de produtos, certificações, recomendações e ausência de hash routing estratégico.
