@@ -7,7 +7,9 @@ const index=read('index.html'), app=read('app.js'), projects=read('projetos/inde
 const sandbox={window:{}};vm.createContext(sandbox);vm.runInContext(dataSource,sandbox);const data=sandbox.window.PORTFOLIO_DATA;
 check('Branding antigo ausente da Home',!index.includes('Product & Project Studio'));
 check('Hero executivo',index.includes('Liderança de projetos complexos conectando estratégia, negócio e tecnologia.'));
-check('Título editorial de projetos na Home',app.includes('Projetos que conectam governança, negócio e tecnologia.'));
+check('Título editorial de projetos estático na Home',index.includes('Projetos que conectam governança, negócio e tecnologia.'));
+check('Título editorial antigo ausente da Home',!index.includes('Prova profissional vem antes da vitrine de produtos.'));
+check('Sem workaround de título no app.js',!app.includes('Prova profissional vem antes da vitrine de produtos.')&&!app.includes('Projetos que conectam governança, negócio e tecnologia.'));
 check('Título editorial da página Projetos',projects.includes('Cases selecionados de transformação, delivery e produto.'));
 check('Projetos sem linguagem interna',!/(placeholders|estrutura está preparada|conteúdo verificável|implementação futura|conteúdo fictício|validação interna)/i.test(projects));
 check('Título editorial da página Sobre',about.includes('Gestão, governança e delivery como eixo central.'));
