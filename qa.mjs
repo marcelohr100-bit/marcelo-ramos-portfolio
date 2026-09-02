@@ -12,23 +12,26 @@ check('Título editorial antigo ausente da Home',!index.includes('Prova profissi
 check('Sem workaround de título no app.js',!app.includes('Prova profissional vem antes da vitrine de produtos.')&&!app.includes('Projetos que conectam governança, negócio e tecnologia.'));
 check('Título editorial da página Projetos',projects.includes('Cases selecionados de transformação, delivery e produto.'));
 check('Projetos sem linguagem interna',!/(placeholders|estrutura está preparada|conteúdo verificável|implementação futura|conteúdo fictício|validação interna)/i.test(projects));
+check('Flagships na Home',index.includes('FluentWay English')&&index.includes('Work Intelligence Hub'));
+check('Flagships na página Projetos',projects.includes('FluentWay English')&&projects.includes('Work Intelligence Hub'));
 check('Título editorial da página Sobre',about.includes('Gestão, governança e delivery como eixo central.'));
 check('Nota pública de PMP ausente',!about.includes('Nenhuma certificação PMP'));
 check('Nota pública de EC-Council ausente',!about.includes('EC-Council'));
 check('Ethical Hacking mantém Udemy visível',about.includes('Certified Ethical Hacking</strong><span>Udemy · ago. 2017'));
 check('CTA projetos antes da seção Innovation Lab',index.indexOf('Ver projetos e cases')<index.indexOf('Product thinking como camada complementar.'));
 for(const item of ['Project Management','PMO & Portfolio','Project Governance','Agile & Scrum','PMBOK & Hybrid Delivery','Stakeholder Management','Risk, Scope & Budget','Team Leadership','Digital Transformation']) check(`Core expertise: ${item}`,data.coreExpertise.some(x=>x.title===item));
-for(const f of ['projetos/index.html','expertise/index.html','sobre/index.html','innovation-lab/index.html','contato/index.html','sitemap.xml','robots.txt','assets/og-cover.png']) check(`Arquivo: ${f}`,exists(f));
-const strategic=['index.html','projetos/index.html','expertise/index.html','sobre/index.html','innovation-lab/index.html'];
+for(const f of ['projetos/index.html','projetos/fluentway/index.html','projetos/work-intelligence-hub/index.html','expertise/index.html','sobre/index.html','innovation-lab/index.html','contato/index.html','sitemap.xml','robots.txt','assets/og-cover.png']) check(`Arquivo: ${f}`,exists(f));
+const strategic=['index.html','projetos/index.html','expertise/index.html','sobre/index.html','innovation-lab/index.html','projetos/fluentway/index.html','projetos/work-intelligence-hub/index.html'];
 for(const f of strategic){const h=read(f);check(`${f}: sem hash routing`,!h.includes('href="#/'));check(`${f}: title`,/<title>[^<]+<\/title>/.test(h));check(`${f}: description`,h.includes('name="description"'));check(`${f}: canonical`,h.includes('rel="canonical"'));check(`${f}: Open Graph`,h.includes('property="og:title"')&&h.includes('property="og:image"'));check(`${f}: Twitter`,h.includes('name="twitter:card"'));check(`${f}: JSON-LD`,h.includes('application/ld+json'));}
 check('Seis produtos preservados',data.products.length===6);check('90 Second Shield fora do destaque',data.products.find(x=>x.slug==='90-second-shield')?.homeFeatured===false);
 for(const p of data.products){check(`${p.name}: página`,exists(`innovation-lab/${p.slug}/index.html`));check(`${p.name}: Gumroad`,p.purchaseLinks.some(x=>x.platform==='Gumroad'&&x.url.startsWith('https://marceloramos3.gumroad.com/')));check(`${p.name}: Payhip`,p.purchaseLinks.some(x=>x.platform==='Payhip'&&x.url.startsWith('https://payhip.com/b/')))}
-check('Dois cases reais preservados',data.projects.filter(x=>x.published).length===2);for(const p of data.projects)check(`${p.name}: case`,exists(`projetos/${p.slug}/index.html`));
+check('Quatro cases publicados',data.projects.filter(x=>x.published).length===4);for(const p of data.projects)check(`${p.name}: case`,exists(`projetos/${p.slug}/index.html`));
+check('Repositórios privados não expostos',!/(github\.com\/marcelohr100-bit\/(fluentway|Work-Inteligence-Hub))/i.test([index,projects,dataSource,read('projetos/fluentway/index.html'),read('projetos/work-intelligence-hub/index.html')].join('\n')));
 check('Estrutura de 4–6 categorias de case',data.caseFramework.length===6);
 check('10 certificações',data.profile.certifications.length===10);check('Sem PMP inventado',!JSON.stringify(data.profile.certifications).match(/\bPMP\b/));check('Ethical Hacking com Udemy',data.profile.certifications.some(x=>x.name==='Certified Ethical Hacking'&&x.issuer==='Udemy'));
 check('5 recomendações registradas',data.profile.recommendationCount===5);check('Sínteses preservadas',data.profile.recommendations.length===2&&about.includes('Síntese editorial'));
 check('LinkedIn presente',index.includes(data.site.linkedin));
-check('Sitemap sem QA',!sitemap.match(/QA_|qa\./i));check('Sitemap inclui páginas estratégicas',['/projetos/','/sobre/','/expertise/','/innovation-lab/'].every(x=>sitemap.includes(x)));check('Robots aponta sitemap',robots.includes('Sitemap:'));
+check('Sitemap sem QA',!sitemap.match(/QA_|qa\./i));check('Sitemap inclui páginas estratégicas',['/projetos/','/projetos/fluentway/','/projetos/work-intelligence-hub/','/sobre/','/expertise/','/innovation-lab/'].every(x=>sitemap.includes(x)));check('Robots aponta sitemap',robots.includes('Sitemap:'));
 check('Foto preservada',exists('assets/profile.png'));check('OG 1200x630 existe',fs.statSync('assets/og-cover.png').size>10000);
 check('Sem dados pessoais sensíveis',!/(99236-4334|pmo\.marcelo\.ramos@gmail\.com|Maria de Jesus)/i.test([index,about,dataSource].join('\n')));
 check('Viewport permite zoom',index.includes('viewport-fit=cover')&&!index.includes('user-scalable=no')&&!index.includes('maximum-scale=1'));
