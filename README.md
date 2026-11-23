@@ -2,7 +2,15 @@
 
 Portfólio profissional de **Marcelo Henrique Ramos**, posicionado prioritariamente em **Project Management, PMO, Portfolio & Project Governance, Agile/Hybrid Delivery e Digital Transformation**.
 
-Microsoft Dynamics 365 permanece como diferenciação técnica relevante dentro de uma identidade profissional mais ampla de gestão e delivery. Produtos próprios ficam organizados em **Innovation Lab** como demonstração complementar de product thinking e iniciativa.
+A apresentação combina trajetória profissional e cases que evidenciam liderança, governança, capacidade de estruturar produtos e integração entre negócio e tecnologia. Microsoft Dynamics 365 permanece como diferenciação técnica relevante. Produtos digitais ficam organizados em **Innovation Lab** como demonstração complementar de iniciativa e product thinking.
+
+## Cases atuais
+
+- CapacityOne — Portfolio Governance & Capacity Planning
+- Cronos Obsidian — Product & Delivery Governance
+- Integração ERP–CRM — Enterprise CRM Delivery
+- FluentWay English — Complex Product Delivery
+- Work Intelligence Hub — Operational Intelligence & AI Governance
 
 ## Estrutura pública
 
@@ -45,4 +53,4 @@ Execute:
 node qa.mjs
 ```
 
-A suíte verifica posicionamento, rotas, metadata, canonical, Open Graph, JSON-LD, sitemap, links de produtos, certificações, recomendações e ausência de hash routing estratégico.
+A suíte verifica posicionamento, cases, rotas, metadata, canonical, Open Graph, JSON-LD, sitemap, links de produtos, certificações, recomendações e ausência de hash routing estratégico.
