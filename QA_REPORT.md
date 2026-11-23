@@ -7,15 +7,19 @@
 GitHub Actions — workflow `Portfolio Quality`:
 
 - `node qa.mjs`
-- **94 verificações aprovadas**
+- **164 verificações aprovadas**
 - **0 falhas**
-- merge candidate validado com conclusão `success`
+- pull request e branch `main` concluídos com `success`
 
 O QA cobre:
 
-- remoção do branding `Product & Project Studio` das áreas principais
-- hero executivo e nova hierarquia da Home
-- Core Expertise
+- posicionamento executivo da Home
+- contexto atual de liderança da célula CRM e governança de portfólio
+- CapacityOne e Cronos Obsidian como cases de liderança e governança
+- Integração ERP–CRM, FluentWay e Work Intelligence Hub preservados e reposicionados
+- remoção completa do SmartMenu AI das páginas públicas, dados e sitemap
+- cinco cases publicados e páginas individuais existentes
+- ordem curada dos cases
 - rotas estratégicas sem hash routing
 - títulos e descriptions próprios
 - canonical
@@ -23,66 +27,31 @@ O QA cobre:
 - Twitter Cards
 - JSON-LD
 - sitemap e robots
-- seis produtos preservados
-- 90 Second Shield fora dos destaques da Home
-- dois cases reais preservados
-- estrutura de dados pronta para seis categorias futuras de cases
-- certificações e emissor
-- ausência de PMP não comprovado
-- diferenciação do certificado `Certified Ethical Hacking — Udemy` em relação à CEH da EC-Council
-- recomendações e sínteses editoriais
-- LinkedIn
-- Gumroad e Payhip
-- foto profissional preservada
-- imagem Open Graph
+- seis produtos preservados no Innovation Lab
+- links Gumroad e Payhip
+- certificações e recomendações
+- foto profissional e LinkedIn
 - viewport com zoom habilitado
 - skip link e main focável
 - ausência de dados pessoais sensíveis conhecidos
-
-## QA visual
-
-Foram validadas **56 combinações de viewport × página**:
-
-- 7 larguras: 320, 360, 390, 430, 768, 1024 e 1440 px
-- 8 rotas representativas
-- ausência de overflow horizontal
-- menu mobile
-- hero
-- Core Expertise
-- cases
-- recomendações
-- Enterprise Technology Expertise
-- Innovation Lab
-- footer
-
-Screenshots finais foram produzidos para:
-
-- Home desktop
-- Home mobile
-- Projetos
-- Sobre
-- Innovation Lab
+- ausência de links públicos para repositórios privados dos cases
 
 ## SEO / arquitetura
 
-- páginas estratégicas convertidas para HTML estático indexável
-- URLs reais para `/projetos/`, `/expertise/`, `/sobre/`, `/innovation-lab/` e `/contato/`
-- páginas individuais para cases e produtos
-- `sitemap.xml`
-- `robots.txt`
-- JSON-LD `Person/ProfilePage`
-- `assets/og-cover.png` em 1200 × 630
+- HTML estático indexável e compatível com GitHub Pages
+- URLs reais para páginas estratégicas e todos os cases
+- sitemap sincronizado com CapacityOne, Cronos Obsidian, Integração ERP–CRM, FluentWay e Work Intelligence Hub
+- SmartMenu AI removido do sitemap e da publicação
+- `robots.txt`, JSON-LD, Open Graph e Twitter Cards preservados
 - PT-BR publicado; arquitetura preparada para futura versão humana/revisada em `/en/`
 
-## Arquivos legados removidos
+## Escopo preservado
 
-Foram removidos arquivos de runtime da arquitetura anterior que deixaram de ser utilizados:
-
-- `identity.css`
-- `quality.css`
-- `profile-data.js`
-- `profile-sections.js`
-- `QA_LAST_RUN.md`
-- `qa-report.json`
-
-A identidade Fluent-inspired continua preservada por `styles.css` + `executive.css`.
+- hero executivo
+- Core Expertise
+- identidade Fluent-inspired
+- Enterprise Technology Expertise em Microsoft Dynamics 365
+- Innovation Lab e seis produtos
+- links comerciais externos
+- certificações, recomendações e conteúdo do LinkedIn
+- responsividade, acessibilidade e arquitetura estática
